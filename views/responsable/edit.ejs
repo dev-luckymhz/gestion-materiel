@@ -1,0 +1,50 @@
+<div id="create-user" class=" mt-3 ml-2" >
+  <div class="col-lg-8 col-md-8 col-sm-12">
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="card-title">
+              <h2>Nouvelle Responsable : </h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <form class=" form" action="/responsable/update" method="POST">
+
+                    <div class="row">
+
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="" class="text-success">Nom</label>
+                          <input type="text" name="fisrtName" class="form-control"  value="<%= element.fisrtName %>" required>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="" class="text-success">Prenom</label>
+                          <input type="text" name="lastName" class="form-control"  value="<%= element.lastName %>" required>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="form-group">
+                          <label for="" class="text-success">Cin</label>
+                          <input type="text" name="cin" class="form-control"  value="<%= element.cin %>" required>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <input type="hidden" name="_csrf" value="<%= _csrf %>">
+                    <input type="hidden" name="id" value="<%= element.id %>">
+                    <a class="btn btn-outline-warning" href="/responsable">Cancel</a>
+                  <button class="btn btn-outline-success" type="submit"> <span class="fa fa-check"></span> Enregistrer</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
+

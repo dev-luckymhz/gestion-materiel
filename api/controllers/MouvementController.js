@@ -48,7 +48,7 @@ module.exports = {
         return res.serverError(err);
       }
       // res.flash('message created');
-      return res.redirect('back');
+      return res.redirect('/mouvement');
       // return res.send({ message: 'task created' });
     });
   },
@@ -81,13 +81,14 @@ module.exports = {
   },
 
   edit: async function(req, res, next) {
-    Mouvement.findOne(req.param('id')).populate('produit').exec(async function Founded(err, value) {
+    Mouvement.findOne(req.param('id')).exec(async function Founded(err, value) {
       if (err) {return next(err);}
       try {
         let prod = await Produit.find();
         let loc = await Localisation.find();
         let resp = await Responsable.find();
-        moment(value.produit).format('DD-MM-YYYY');
+        // sails.log(value);
+        moment(value.Date).format('DD-MM-YYYY');
         return res.view( 'mouvement/edit', {
           element: value,
           prod: prod,
@@ -110,11 +111,11 @@ module.exports = {
       Destination: req.param('Destination'),
       Responsable: req.param('Responsable')
     };
-    Mouvement.update({ id : id }, valeur, function Update(err, value) {
+    Mouvement.updateOne({ id : id }).set(valeur).exec((err, value) => {
       if (err) {
         return next(err);
       }
-      return res.redirect('Mouvement/show/' + req.param('id'));
+      return res.redirect('/mouvement');
     });
   },
 

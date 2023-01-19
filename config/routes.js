@@ -21,6 +21,7 @@ module.exports.routes = {
 
   'GET /mouvement/new': 'MouvementController/new' ,
   'POST /mouvement/create': 'MouvementController/create' ,
+  'POST /mouvement/update': 'MouvementController/update' ,
   'GET /mouvement/show/:id': 'MouvementController/show' ,
   'GET /mouvement/edit/:id': 'MouvementController/edit' ,
   'GET /mouvement/delete/:id': 'MouvementController/delete' ,

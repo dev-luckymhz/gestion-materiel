@@ -1,0 +1,33 @@
+<div class="card text-left" id="responsable-list">
+  <div class="card-body">
+    <a class="btn btn-outline-success mr-3 mb-1 float-right" href="/responsable/new" type="button">Nouveaux</a>
+      <h4 class="card-title mb-3"> Liste des responsable </h4>
+      <!-- <p>La liste des Types de equipement disponible dans le departement</p> -->
+      <div class="table-responsive">
+        <table class="table table-striped " id="table" v-cloak>
+          <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nom du responsable</th>
+                <th scope="col">Prenom du responsable</th>
+                <th scope="col">Cin</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% responsable.forEach((item, i) => { %>
+            <tr>
+                <th scope="row"><%= (i + 1) %> </th>
+                <td><%= item.fisrtName %></td>
+                <td><%= item.lastName %></td>
+                <td><%= item.cin %></td>
+                  <a class="text-success mr-2" href="/responsable/edit/<%= item.id %>"><i class="nav-icon i-Pen-2 font-weight-bold"></i></a>
+                  <a class="text-danger mr-2" href="/responsable/delete/<%= item.id %>"><i class="nav-icon i-Pause font-weight-bold"></i></a>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+        </table>
+      </div>
+  </div>
+</div>
