@@ -18,13 +18,21 @@ module.exports.routes = {
 
 
   'GET /mouvement': 'MouvementController/index' ,
-
   'GET /mouvement/new': 'MouvementController/new' ,
   'POST /mouvement/create': 'MouvementController/create' ,
   'POST /mouvement/update': 'MouvementController/update' ,
   'GET /mouvement/show/:id': 'MouvementController/show' ,
   'GET /mouvement/edit/:id': 'MouvementController/edit' ,
   'GET /mouvement/delete/:id': 'MouvementController/delete' ,
+
+
+  'GET /responsable': 'ResponsableController/index' ,
+  'GET /responsable/new': 'ResponsableController/new' ,
+  'POST /responsable/create': 'ResponsableController/create' ,
+  'POST /responsable/update': 'ResponsableController/update' ,
+  'GET /responsable/show/:id': 'ResponsableController/show' ,
+  'GET /responsable/edit/:id': 'ResponsableController/edit' ,
+  'GET /responsable/delete/:id': 'ResponsableController/delete' ,
 
 
   //   'GET /Entretient': 'EntretientController/index' ,
