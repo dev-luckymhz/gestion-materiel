@@ -1,0 +1,36 @@
+<div id="login" v-cloak>
+<div class="container-fluid mt-4 mb-3 "> <h1 class="d-flex justify-content-center text-success"> Bienvenue sur le portail logistique</h1></div>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+  <div class="container-fluid bg-success pt-5 mt-3 rounded pb-5">
+    <h3 class="text-center">Connecter vous a votre compte</h3>
+    <div style="max-width: 450px;" class="mx-auto">
+      <hr/>
+      <ajax-form action="login" :syncing.sync="syncing" :cloud-error.sync="cloudError" :form-data="formData" :form-rules="formRules" :form-errors.sync="formErrors" @submitted="submittedForm()">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email address@greentsika.com" :class="[formErrors.emailAddress? 'is-invalid' : '']" v-model.trim="formData.emailAddress" autocomplete="email" focus-first>
+          <div class="invalid-feedback" v-if="formErrors.emailAddress">Veuillez saisir une adresse mail validee</div>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" :class="[formErrors.password ? 'is-invalid' : '']" v-model.trim="formData.password" autocomplete="current-password">
+          <div class="invalid-feedback" v-if="formErrors.password">Veuillez entrer votre mot de passe</div>
+        </div>
+        <div class="form-group form-check">
+          <input class="form-check-input" type="checkbox" id="remember" name="rememberMe" v-model="formData.rememberMe"/>
+          <label class="form-check-label text-white" for="remember">Souvenez moi or remenber me</label>
+        </div>
+        <cloud-error v-if="cloudError==='badCombo'" style="background-color: white;">Le mail que vous avez creer n'est pas associer a notre entreprise.Veuillez en creer un.  </cloud-error>
+        <cloud-error v-else-if="cloudError"></cloud-error>
+        <div class="form-group">
+          <ajax-button :syncing="syncing" class="btn-info btn-lg btn-block">Sign in <i class="fa fa-send"></i></ajax-button>
+        </div>
+      </ajax-form>
+      <p ><a class="text-white align-self center" href="/password/forgot">Mot de passe oublie?</a></p>
+      </div>
+    </div>
+    <div class="col-3"></div>
+    </div>
+  </div>
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

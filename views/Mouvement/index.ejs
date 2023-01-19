@@ -1,0 +1,73 @@
+<div class="mt-3 ml-2">
+
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-12">
+      <div class="card text-left" id="user-list">
+        <div class="card-body">
+          <a class="btn btn-outline-success mr-3 mb-1 float-right" href="/mouvement/new" type="button">Nouveaux</a>
+            <h4 class="card-title mb-3"> Liste des Mouvement </h4>
+            <p>La liste des Mouvement   </p>
+            <div class="table-responsive">
+              <table id="myTab" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+
+                    <!-- <th>Reference</th> -->
+                    <th>Nom Article</th>
+                    <th>Type de Mouvement</th>
+                    <th>Quantite</th>
+                    <th>Date</th>
+                    <th>Responsable</th>
+                    <th>Destination</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <% result.forEach((item, i) => { %>
+                    <tr>
+                      <td>
+                        <%= (i + 1) %>
+                      </td>
+                        <td>
+                          <%= item.produit.nomArticle %>
+                        </td>
+                        <!-- <td>
+                          <%= item.Reference %>
+                        </td> -->
+                        <td>
+                          <% if (item.TypeMouvement) {%> Entrer <% } %>
+                          <% if (!item.TypeMouvement) {%> Sortie <% } %>
+                        </td>
+                        <td>
+                          <%= item.Quantite %>
+                        </td>
+                        <td>
+                          <%= item.Date %>
+                        </td>
+                        <td>
+                          <%= item.Responsable.fisrtName %>
+                        </td>
+                        <td>
+                          <%= item.Destination.ville %>
+                        </td>
+                      <td>
+                        <a class="text-success mr-2" href="/Mouvement/show/<%= item.id %>"><i class="fa fa-eye"></i></a>
+
+                        <a class="text-warning mr-2" href="/Mouvement/edit/<%= item.id %>"><i class="fa fa-pencil"></i></a>
+
+                        <a class="text-danger mr-2" href="/Mouvement/delete/<%= item.id %>"><i class="fa fa-trash"></i></a>
+                      </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

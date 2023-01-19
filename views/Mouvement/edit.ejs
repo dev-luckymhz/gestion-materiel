@@ -1,0 +1,185 @@
+<!-- <div class=" container">
+	<h1>NOUVELLE ENTREE/SORTIE</h1>
+	<div class="body">
+		<form class=" form" action="/mouvement/create" method="POST">
+				<div class="form-group">
+					<label for="" class="text-succes">Article</label>
+					<select name="article" autocomplete="off" class="form-control" id="">
+						<option value=""></option>
+						<% prod.forEach((item, i) => { %>
+							<option value="<%= item.id %>" <% if(element.produit.id == item.id ) { %> selected <% } %>> <%= item.nomArticle %></option>
+						<% }) %>
+					</select>
+
+				</div>
+				<div class="form-group">
+					<label for="" class="text-success">Type de Mouvement</label>
+					<select name="TypeMouvement" class="form-control" value="<%= element.TypeMouvement %>" autocomplete="off"  id=""z>
+						<option value="true" autocomplete="off" class="bg-primary">Entree</option>
+						<option value="false" autocomplete="off" class="bg-danger">Sortie</option>
+					</select>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<label for="" class="text-success">Quantite</label>
+							<input type="number" name="Quantite" class="form-control"  value="<%= element.Quantite %>" required="false">
+						</div>
+					</div>
+					<div class="col">
+
+						<div class="form-group">
+							<label for="" class="text-success">Date</label>
+							<input type="date" name="Date" class="form-control"  value="<%= element.Date %>" required="false">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="text-success">Responsable</label>
+					<input type="text" name="Responsable"  class="form-control"  value="<%= element.Responsable %>" required="false">
+				</div>
+				<div class="form-group">
+					<label for="" class="text-success">Destination</label>
+					<input type="text" name="Destination" class="form-control" value="<%= element.Destination %>" required="false">
+				</div>
+				<input type="hidden" name="_csrf" value="<%= _csrf %>">
+				<a class="btn btn-warning" href="/Mouvement">Cancel</a>
+			<button class="btn btn-success" type="submit">Save Mouvement</button>
+		</form>
+		<br />
+	</div>
+</div> -->
+
+
+<!-- <div class="row">
+  <div class="col-3">
+  </div>
+<div class="container-fluid pt-5 mt-3 rounded pb-5 col-6">
+  <div class="body">
+    <form class="form" action="/Mouvement/update" method="post">
+      <input name="id" value="<%= element.id %>" hidden="true" required>
+        <div class="form-group ">
+          <label for="" class="text-success">Article</label>
+          <input type="text" name="article" value="<%= element.Article %>" class="form-control" required="false">
+        </div>
+        <div class="form-group ">
+          <label for="" class="text-success">TypeMouvement</label>
+          <select name="typMv" class="form-control" id="">
+						<option value="true" <% if (element.TypeMouvement) {%> selected <% } %>>Entree</option>
+						<option value="false"  <% if (!element.TypeMouvement) {%> selected <% } %>>Sortie</option>
+					</select>
+
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group ">
+              <label for="" class="text-success">Quantity</label>
+              <input type="number" name="quantity" value="<%= element.Quantity %>" class="form-control" required="false">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group ">
+              <label for="" class="text-success">Date</label>
+              <input type="date" name="date" value="<%= element.Date %>" class="form-control" required="false">
+            </div>
+          </div>
+        </div>
+        <div class="form-group ">
+          <label for="" class="text-success">Responsable</label>
+          <input type="text" name="responsable" value="<%= element.Responsable %>" class="form-control" required="false">
+        </div>
+        <div class="form-group ">
+          <label for="" class="text-success">Destination</label>
+          <input type="text" name="destination" value="<%= element.Destination %>" class="form-control" required="false">
+        </div>
+        <a href="/Mouvement" class="btn btn-success">Cancel</a>
+      <button type="submit" class="btn btn-success">Update Mouvement</button>
+    </form>
+    <br />
+  </div>
+</div>
+<div class="col-3"></div>
+</div>  -->
+
+
+ <!-- <div class=" container border-radius">
+	<h1>NOUVELLE ENTREE/SORTIE</h1>
+	<div class="body">
+
+		<br />
+	</div>
+</div> -->
+<div id="create-user" class=" mt-3 ml-2" >
+  <div class="col-lg-8 col-md-8 col-sm-12">
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="card-title">
+              <h2>Une Nouvelle Mouvement : </h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <form class=" form" action="/mouvement/create" method="POST">
+                    <div class="form-group">
+                      <label for="" class="text-succes">Article</label>
+                      <select name="Article" class="form-control" autocomplete="off" id="">
+                        <option value="">choisisser 1</option>
+                        <% prod.forEach((item, i) => { %>
+                          <option class=" bg-muted" value="<%= item.id %>" <% if(element.produit.id == item.id ) { %> selected <% } %>><%= item.nomArticle %></option>
+                        <% }) %>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="TypeMouvement" class="text-success">Type de Mouvement</label>
+                      <select name="TypeMouvement" class="form-control" autocomplete="off"  id=""z>
+                        <option value="true" <% if (element.TypeMouvement) {%> selected <% } %>>Entree</option>
+                        <option value="false"  <% if (!element.TypeMouvement) {%> selected <% } %>>Sortie</option>
+                      </select>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="" class="text-success">Quantite</label>
+                          <input type="number" name="Quantite" class="form-control"  value="<%= element.Quantite %>" required>
+                        </div>
+                      </div>
+                      <div class="col">
+
+                        <div class="form-group">
+                          <label for="" class="text-success">Date</label>
+                          <input type="date" name="Date" class="form-control"  value="<%= element.Date %>" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="text-success">Responsable</label>
+                      <!-- <input type="text" name="Responsable"  class="form-control"  value="" required="false"> -->
+                      <select name="Responsable" class="form-control" autocomplete="off" required id="">
+                        <option value="">choisisser 1</option>
+                        <% resp.forEach((item, i) => { %>
+                          <option class=" bg-muted" value="<%= item.id %>" <% if(element.Responsable.id == item.id ) { %> selected <% } %>><%= item.fisrtName %></option>
+                        <% }) %>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="text-success">Destination</label>
+                      <!-- <input type="text" name="Destination" value="" class="form-control"  required="false"> -->
+                      <select name="Destination" class="form-control" autocomplete="off" required id="">
+                        <option value="">choisisser 1</option>
+                        <% loc.forEach((item, i) => { %>
+                          <option class=" bg-muted" value="<%= item.id %>" <% if(element.Destination.id == item.id ) { %> selected <% } %> > <%= item.ville %></option>
+                        <% }) %>
+                      </select>
+                    </div>
+                    <input type="hidden" name="_csrf" value="<%= _csrf %>">
+                    <a class="btn btn-outline-warning" href="/Mouvement">Cancel</a>
+                  <button class="btn btn-outline-success" type="submit"> <span class="fa fa-check"></span> Save Mouvement</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
+

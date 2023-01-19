@@ -1,0 +1,39 @@
+<div class="container">
+
+
+<h1>Show Mouvement</h1>
+
+	<!-- <p>
+		<strong>Reference:</strong>
+		<%= element.Reference %>
+	</p> -->
+	<p>
+		<strong>Article:</strong>
+		<%= element.Article %>
+	</p>
+	<p>
+		<strong>TypeMouvement:</strong>
+		<%= element.TypeMouvement %>
+	</p>
+	<p>
+		<strong>Quantity:</strong>
+		<%= element.Quantity %>
+	</p>
+	<p>
+		<strong>Date:</strong>
+		<%= element.Date %>
+	</p>
+	<p>
+		<strong>Responsable:</strong>
+		<%= element.Responsable %>
+	</p>
+	<p>
+		<strong>Destination:</strong>
+		<%= element.Destination %>
+	</p>
+
+<br>
+<a class="btn btn-warning" href="/Mouvement/edit/<%= element.id %>">Edit</a>
+<a class="btn btn-success" href="/Mouvement/create">New</a>
+<a href="/Mouvement" class="btn btn-danger ">Back</a>
+</div>

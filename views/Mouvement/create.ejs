@@ -1,0 +1,81 @@
+ <!-- <div class=" container border-radius">
+	<h1>NOUVELLE ENTREE/SORTIE</h1>
+	<div class="body">
+
+		<br />
+	</div>
+</div> -->
+<div id="create-user" class=" mt-3 ml-2" >
+  <div class="col-lg-8 col-md-8 col-sm-12">
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="card-title">
+              <h2>Une Nouvelle Mouvement : </h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <form class=" form" action="/mouvement/create" method="POST">
+                    <div class="form-group">
+                      <label for="" class="text-succes">Article</label>
+                      <select name="Article" class="form-control" autocomplete="off" id="">
+                        <option value="">choisisser 1</option>
+                        <% prod.forEach((item, i) => { %>
+                          <option class=" bg-muted" value="<%= item.id %>"><%= item.nomArticle %></option>
+                        <% }) %>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="TypeMouvement" class="text-success">Type de Mouvement</label>
+                      <select name="TypeMouvement" class="form-control" autocomplete="off"  id=""z>
+                        <option value="true">Entree</option>
+                        <option value="false">Sortie</option>
+                      </select>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="" class="text-success">Quantite</label>
+                          <input type="number" name="Quantite" class="form-control"  value="" required>
+                        </div>
+                      </div>
+                      <div class="col">
+
+                        <div class="form-group">
+                          <label for="" class="text-success">Date</label>
+                          <input type="date" name="Date" class="form-control"  value="" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="text-success">Responsable</label>
+                      <!-- <input type="text" name="Responsable"  class="form-control"  value="" required="false"> -->
+                      <select name="Responsable" class="form-control" autocomplete="off" required id="">
+                        <option value="">choisisser 1</option>
+                        <% resp.forEach((item, i) => { %>
+                          <option class=" bg-muted" value="<%= item.id %>"><%= item.fisrtName %></option>
+                        <% }) %>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="text-success">Destination</label>
+                      <!-- <input type="text" name="Destination" value="" class="form-control"  required="false"> -->
+                      <select name="Destination" class="form-control" autocomplete="off" required id="">
+                        <option value="">choisisser 1</option>
+                        <% loc.forEach((item, i) => { %>
+                          <option class=" bg-muted" value="<%= item.id %>"><%= item.ville %></option>
+                        <% }) %>
+                      </select>
+                    </div>
+                    <input type="hidden" name="_csrf" value="<%= _csrf %>">
+                    <a class="btn btn-outline-warning" href="/Mouvement">Cancel</a>
+                  <button class="btn btn-outline-success" type="submit"> <span class="fa fa-check"></span> Save Mouvement</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>
+
