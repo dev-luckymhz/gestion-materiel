@@ -35,6 +35,15 @@ module.exports.routes = {
   'GET /responsable/delete/:id': 'ResponsableController/delete' ,
 
 
+  'GET /article': 'ArticleController/index' ,
+  'GET /article/new': 'ArticleController/new' ,
+  'POST /article/create': 'ArticleController/create' ,
+  'POST /article/update': 'ArticleController/update' ,
+  'GET /article/show/:id': 'ArticleController/show' ,
+  'GET /article/edit/:id': 'ArticleController/edit' ,
+  'GET /article/delete/:id': 'ArticleController/delete' ,
+
+
   //   'GET /Entretient': 'EntretientController/index' ,
   //   'GET/Entreient':'Entretientcontroller/new',
   // 'POST / Entretient': {view: 'Entretient/create'},

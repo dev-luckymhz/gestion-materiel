@@ -5,7 +5,7 @@
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
-generateMatricule =  function () {
+const generateMatricule =  function () {
   let chars = '0123456789';
   let passwordLenght = 8;
   let password = '';
@@ -21,7 +21,7 @@ module.exports = {
       if (err) {return Error('Error');}
       // sails.log(list)
       return res.view( 'responsable/index' , {
-        result: list
+        responsable: list
       });
     });
   },
@@ -61,7 +61,7 @@ module.exports = {
   edit: async function(req, res, next) {
     Responsable.findOne(req.param('id')).exec(async function Founded(err, value) {
       if (err) {return next(err);}
-      return res.view( '/responsable/edit', {
+      return res.view( 'responsable/edit', {
         element: value
       });
 

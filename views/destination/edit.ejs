@@ -1,0 +1,24 @@
+<div class="">
+  <h1>New Produit</h1>
+
+  <div class="body">
+    <form class="" action="/Produit/update" method="post">
+      <input name="id" value="<%= element.id %>" hidden="true" required>
+        <div class="">
+          <label for="">nomArticle</label>
+          <input type="text" name="nomArticle" value="<%= element.nomArticle %>" required="false">
+        </div>
+        <div class="">
+          <label for="">Reference</label>
+          <input type="text" name="Reference" value="<%= element.Reference %>" required="false">
+        </div>
+        <div class="">
+          <label for="">designation</label>
+          <input type="text" name="designation" value="<%= element.designation %>" required="false">
+        </div>
+      <button type="submit">Update Produit</button>
+    </form>
+    <br />
+    <a href="/Produit">Index</a>
+  </div>
+</div>

@@ -1,39 +1,62 @@
-<div class="container">
 
-
-<h1>Show Mouvement</h1>
-
-	<!-- <p>
-		<strong>Reference:</strong>
-		<%= element.Reference %>
-	</p> -->
-	<p>
-		<strong>Article:</strong>
-		<%= element.Article %>
-	</p>
-	<p>
-		<strong>TypeMouvement:</strong>
-		<%= element.TypeMouvement %>
-	</p>
-	<p>
-		<strong>Quantity:</strong>
-		<%= element.Quantity %>
-	</p>
-	<p>
-		<strong>Date:</strong>
-		<%= element.Date %>
-	</p>
-	<p>
-		<strong>Responsable:</strong>
-		<%= element.Responsable %>
-	</p>
-	<p>
-		<strong>Destination:</strong>
-		<%= element.Destination %>
-	</p>
-
-<br>
-<a class="btn btn-warning" href="/Mouvement/edit/<%= element.id %>">Edit</a>
-<a class="btn btn-success" href="/Mouvement/create">New</a>
-<a href="/Mouvement" class="btn btn-danger ">Back</a>
+<div id="user-detail" class="row ml-2 mt-3" >
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="card-title">
+              <a class="text-success mr-2 float-right" href="/mouvement/edit/<%= element.id %>"><i class="nav-icon i-Pen-2 font-weight-bold"></i> Editer</a>
+              <h2>Information concernat le mouvement : </h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Nom de l'article : </td>
+                            <td class="font-weight-bold "><%= element.produit.nomArticle %></td>
+                            <!-- <td class="font-weight-bold">
+                              <a class="text-success mr-2" href="#"><i class="nav-icon i-Pen-2 font-weight-bold"></i></a>
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td>Quantite : </td>
+                            <td class="font-weight-bold"><%= element.Quantite  %></td>
+                            <!-- <td class="font-weight-bold">
+                              <a class="text-success mr-2" href="#"><i class="nav-icon i-Pen-2 font-weight-bold"></i></a>
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td>Nom du Responsable : </td>
+                            <!-- <td class="text-success"><%= res.cin %></td> -->
+                            <td class="font-weight-bold"><%= element.Responsable.fisrtName %></td>
+                            <!-- <td class="text-danger">
+                              <a class="text-success mr-2" href="#"><i class="nav-icon i-Remove font-weight-bold"></i></a>
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td>Destination : </td>
+                            <!-- <td class="text-success"><%= res.cin %></td> -->
+                            <td class="font-weight-bold"><%= element.Destination.ville %></td>
+                            <!-- <td class="text-danger">
+                              <a class="text-success mr-2" href="#"><i class="nav-icon i-Remove font-weight-bold"></i></a>
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td>Type de mouvement : </td>
+                            <!-- <td class="text-success"><%= res.cin %></td> -->
+                            <td class="font-weight-bold">
+                              <% if (element.TypeMouvement) {%> Entrer <% } %>
+                              <% if (!element.TypeMouvement) {%> Sortie <% } %>
+                            </td>
+                            <!-- <td class="text-danger">
+                              <a class="text-success mr-2" href="#"><i class="nav-icon i-Remove font-weight-bold"></i></a>
+                            </td> -->
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
