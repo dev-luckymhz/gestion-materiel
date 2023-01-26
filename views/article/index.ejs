@@ -8,7 +8,7 @@
             <h4 class="card-title mb-3"> Liste des Article </h4>
             <p>La liste des Article disponible sur le site </p>
             <div class="table-responsive">
-              <table id="myTab" class="table table-striped">
+              <table id="mytab" class="table table-striped">
                 <thead>
                   <tr>
                       <th scope="col">#</th>
@@ -37,17 +37,15 @@
                 </tbody>
               </table>
             </div>
-            <div class="row">
-              <div class="col-md-12 text-succes">
-                  <ul class="pagination pull-right mr-3">
-                      <%- pagination %>
-                  </ul>
-              </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    let table = new DataTable('#mytab', {
+        // options
+    });
+    </script>
 </div>
 
 

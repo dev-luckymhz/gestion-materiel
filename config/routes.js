@@ -20,6 +20,7 @@ module.exports.routes = {
   'GET /mouvement': 'MouvementController/index' ,
   'GET /mouvement/new': 'MouvementController/new' ,
   'POST /mouvement/create': 'MouvementController/create' ,
+  'POST /mouvement/search': 'MouvementController/search' ,
   'POST /mouvement/update': 'MouvementController/update' ,
   'GET /mouvement/show/:id': 'MouvementController/show' ,
   'GET /mouvement/edit/:id': 'MouvementController/edit' ,
@@ -42,6 +43,15 @@ module.exports.routes = {
   'GET /article/show/:id': 'ArticleController/show' ,
   'GET /article/edit/:id': 'ArticleController/edit' ,
   'GET /article/delete/:id': 'ArticleController/delete' ,
+
+
+  'GET /destination': 'DestinationController/index' ,
+  'GET /destination/new': 'DestinationController/new' ,
+  'POST /destination/create': 'DestinationController/create' ,
+  'POST /destination/update': 'DestinationController/update' ,
+  'GET /destination/show/:id': 'DestinationController/show' ,
+  'GET /destination/edit/:id': 'DestinationController/edit' ,
+  'GET /destination/delete/:id': 'DestinationController/delete' ,
 
 
   //   'GET /Entretient': 'EntretientController/index' ,

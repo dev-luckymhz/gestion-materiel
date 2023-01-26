@@ -13,7 +13,9 @@ module.exports = {
     let total       = 0;
     let pagination   = '';
 
-    Produit.find().limit(_LIMIT_).skip(page-1).exec((err, list) => {
+    Produit.find()
+    // .limit(_LIMIT_)
+    .skip(page-1).exec((err, list) => {
       if (err) {return Error('Error');}
       Produit.count().exec((err1, totalRecords) => {
         if (err1) {return Error('Error');}
@@ -44,7 +46,9 @@ module.exports = {
         /* END: pagination bar */
         return res.view( 'article/index' , {
           responsable: list,
-          page: page, pagination: pagination, total: total
+          page: page,
+          // pagination: pagination,
+          total: total
         });
       });
     });

@@ -36,31 +36,34 @@
         (https://sailsjs.com/docs/concepts/assets/task-automation)
     */ %>
 
-    <% /* Auto-injected «link» tags: */ %>
-    <!--STYLES-->
+
+
+    <!-- <link rel="stylesheet" href="/dependencies/bootstrap-4/light-bootstrap-dashboard.css"> -->
     <link rel="stylesheet" href="/dependencies/bootstrap-4/bootstrap-4.css">
     <link rel="stylesheet" href="/dependencies/fontawesome.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <link rel="stylesheet" href="/styles/style.css">
-    <!--STYLES END-->
 
-    <script src="/dependencies/jquery.min.js"></script>
+
     <script src="/datatable/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/datatable/datatables.min.css">
     <script src="/datatable/datatables.js"></script>
 
   </head>
   <body>
+
     <div purpose="page-wrap">
       <header class="navbar navbar-expand-sm navbar bg-success flex-column flex-md-row justify-content-between" purpose="page-header">
         <a style="cursor: pointer;" class="navbar-brand mr-0" href="/"><img style="height: 20px;" class="logo" alt="NEW_APP_NAME logo" src="/images/logo.png"/></a>
         <div class="navbar-nav flex-row">
           <!-- LOGGED-IN NAVIGATION -->
           <% if(me) { %>
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0 text-white" href="/contact">Help</a>
+
+          <!-- <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0 text-white" href="/contact">Help</a> -->
           <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0 text-white" href="/mouvement">Mouvement</a>
           <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0 text-white" href="/responsable">Responsable</a>
           <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0 text-white" href="/article">Article</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0 text-white" href="/destination">Destination</a>
           <!-- Only in desktop nav -->
           <div class="nav-item dropdown d-none d-sm-block">
             <a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>

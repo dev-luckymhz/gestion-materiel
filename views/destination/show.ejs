@@ -1,19 +1,42 @@
-<h1>Show Produit</h1>
-
-	<p>
-		<strong>nomArticle:</strong>
-		<%= element.nomArticle %>
-	</p>
-	<p>
-		<strong>Reference:</strong>
-		<%= element.Reference %>
-	</p>
-	<p>
-		<strong>designation:</strong>
-		<%= element.designation %>
-	</p>
-
-<br>
-<a href="/Produit/edit/<%= element.id %>">Edit</a>
-<a href="/Produit/create">New</a>
-<a href="/Produit">Back</a>
+<div id="user-detail" class="row ml-2 mt-3" >
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="card-title">
+              <a class="btn btn-outline-success mr-2 float-right" href="/destination/edit/<%= element.id %>"><i class="nav-icon i-Pen-2 font-weight-bold"></i> Editer</a>
+              <h2>Information concernant l'article Responsable : </h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Ville : </td>
+                            <td class="font-weight-bold "><%= element.ville %></td>
+                            <!-- <td class="font-weight-bold">
+                              <a class="text-success mr-2" href="#"><i class="nav-icon i-Pen-2 font-weight-bold"></i></a>
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td>lot : </td>
+                            <td class="font-weight-bold"><%= element.lot %></td>
+                            <!-- <td class="font-weight-bold">
+                              <a class="text-success mr-2" href="#"><i class="nav-icon i-Pen-2 font-weight-bold"></i></a>
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td>code : </td>
+                            <!-- <td class="text-success"><%= res.cin %></td> -->
+                            <td class="font-weight-bold"><%= element.code %></td>
+                            <!-- <td class="text-danger">
+                              <a class="text-success mr-2" href="#"><i class="nav-icon i-Remove font-weight-bold"></i></a>
+                            </td> -->
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
