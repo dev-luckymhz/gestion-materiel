@@ -5,9 +5,10 @@ This is a web application built with Sails.js that allows you to manage the equi
 - `Authentification`
 
 <p align="center">
-<img src="./screenshoot/login.png" alt="Alt Text" width="300" height="200" align="center"/>
-<img src="./screenshoot/register.png" alt="Alt Text" width="300" height="200" align="center"/>
-<img src="./screenshoot/account.png" alt="Alt Text" width="300" height="200" align="center"/>
+<img src="./screenshoot/login.png" alt="Login Screenshot" width="300" height="200" align="center" style="margin: 20px auto; display: block;" />
+<img src="./screenshoot/register.png" alt="Register Screenshot" width="300" height="200" align="center" style="margin: 20px auto; display: block;" />
+<img src="./screenshoot/account.png" alt="Account Screenshot" width="300" height="200" align="center" style="margin: 20px auto; display: block;" />
+
 </p>
 
 - `Form`
