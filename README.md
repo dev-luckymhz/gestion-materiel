@@ -65,7 +65,7 @@ Please make sure to install these dependencies by running `npm install` before s
 
 To get started with the Equipment Management App, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/Zo-ambinintsoa/egg-app.git`
+1. Clone the repository: `git clone https://github.com/Zo-ambinintsoa/gestion-materiel.git`
 2. Install the dependencies: `npm install`
 3. Start the application: `npm start`
 4. Access the application in your browser at `http://localhost:1337`
