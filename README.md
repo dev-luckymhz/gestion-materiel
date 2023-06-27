@@ -1,28 +1,77 @@
-# gestionmateriel
+# Equipment Management App
 
-a [Sails v1](https://sailsjs.com) application
+This is a web application built with Sails.js that allows you to manage the equipment of an organization.
 
+## Requirements
 
-### Links
+Before running the application, make sure you have the following requirements installed:
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+- [Node.js](https://nodejs.org) (v14 or higher)
+- [MongoDB](https://www.mongodb.com) (v4 or higher)
 
+## Routes
 
-### Version info
+The following routes are available in the application:
 
-This app was originally generated on Sun Nov 27 2022 16:03:06 GMT+0300 (heure normale d’Afrique de l’Est) using Sails v1.5.2.
+- `GET /`: Displays the homepage or redirects to the appropriate page.
+- `GET /mouvement`: Displays the list of movements.
+- `GET /mouvement/new`: Shows the form for creating a new movement.
+- `POST /mouvement/create`: Creates a new movement.
+- `POST /mouvement/search`: Searches for movements.
+- `POST /mouvement/update`: Updates a movement.
+- `GET /mouvement/show/:id`: Shows the details of a specific movement.
+- `GET /mouvement/edit/:id`: Shows the edit form for a specific movement.
+- `GET /mouvement/delete/:id`: Deletes a specific movement.
+- `GET /responsable`: Displays the list of responsables.
+- `GET /responsable/new`: Shows the form for creating a new responsable.
+- `POST /responsable/create`: Creates a new responsable.
+- `POST /responsable/update`: Updates a responsable.
+- `GET /responsable/show/:id`: Shows the details of a specific responsable.
+- `GET /responsable/edit/:id`: Shows the edit form for a specific responsable.
+- `GET /responsable/delete/:id`: Deletes a specific responsable.
+- `GET /article`: Displays the list of articles.
+- `GET /article/new`: Shows the form for creating a new article.
+- `POST /article/create`: Creates a new article.
+- `POST /article/update`: Updates an article.
+- `GET /article/show/:id`: Shows the details of a specific article.
+- `GET /article/edit/:id`: Shows the edit form for a specific article.
+- `GET /article/delete/:id`: Deletes a specific article.
+- `GET /destination`: Displays the list of destinations.
+- `GET /destination/new`: Shows the form for creating a new destination.
+- `POST /destination/create`: Creates a new destination.
+- `POST /destination/update`: Updates a destination.
+- `GET /destination/show/:id`: Shows the details of a specific destination.
+- `GET /destination/edit/:id`: Shows the edit form for a specific destination.
+- `GET /destination/delete/:id`: Deletes a specific destination.
 
-<!-- Internally, Sails used [`sails-generate@2.0.7`](https://github.com/balderdashy/sails-generate/tree/v2.0.7/lib/core-generators/new). -->
+## Dependencies
 
+The application relies on the following dependencies:
 
-This project's boilerplate is based on an expanded seed app provided by the [Sails core team](https://sailsjs.com/about) to make it easier for you to build on top of ready-made features like authentication, enrollment, email verification, and billing.  For more information, [drop us a line](https://sailsjs.com/support).
+- `@sailshq/connect-redis` (v3.2.1): Redis session store for Sails.js.
+- `@sailshq/lodash` (v3.10.3): Utility library for JavaScript.
+- `@sailshq/socket.io-redis` (v5.2.0): Redis adapter for Socket.IO in Sails.js.
+- `moment` (v2.29.4): JavaScript library for manipulating dates and times.
+- `sails` (v1.5.2): MVC framework for Node.js.
+- `sails-hook-apianalytics` (v2.0.3): Sails.js hook for collecting API analytics.
+- `sails-hook-organics` (v2.0.0): Sails.js hook for organizing models, controllers, services, and policies.
+- `sails-hook-orm` (v4.0.0): Sails.js hook for managing the ORM (Object-Relational Mapping) layer.
+- `sails-hook-sockets` (v2.0.0): Sails.js hook for enabling real-time communication using Socket.IO.
+- `sails-mongo` (v2.0.0): MongoDB adapter for Sails.js.
 
+Please make sure to install these dependencies by running `npm install` before starting the application.
 
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+## Getting Started
 
+To get started with the Equipment Management App, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/Zo-ambinintsoa/egg-app.git`
+2. Install the dependencies: `npm install`
+3. Start the application: `npm start`
+4. Access the application in your browser at `http://localhost:1337`
+
+That's it! You should now be able to use the Equipment Management App to manage the equipment of your organization.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
