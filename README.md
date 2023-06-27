@@ -14,7 +14,7 @@ This is a web application built with Sails.js that allows you to manage the equi
   
 <p align="center">
 <img src="./screenshoot/form.png" alt="Alt Text" width="400" height="200" align="center"/>
-<img src="./screenshot/form_1.png" alt="Alt Text" width="400" height="200" align="center"/>
+<img src="./screenshoot/form_1.png" alt="Alt Text" width="400" height="200" align="center"/>
 </p>
 
 - `Listing`
