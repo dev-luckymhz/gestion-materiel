@@ -2,6 +2,28 @@
 
 This is a web application built with Sails.js that allows you to manage the equipment of an organization.
 
+- `Authentification`
+
+<p align="center">
+<img src="./screenshoot/login.png" alt="Alt Text" width="300" height="200" align="center"/>
+<img src="./screenshoot/register.png" alt="Alt Text" width="300" height="200" align="center"/>
+<img src="./screenshoot/account.png" alt="Alt Text" width="300" height="200" align="center"/>
+</p>
+
+- `Form`
+  
+<p align="center">
+<img src="./screenshoot/form.png" alt="Alt Text" width="400" height="200" align="center"/>
+<img src="./screenshot/form_1.png" alt="Alt Text" width="400" height="200" align="center"/>
+</p>
+
+- `Listing`
+  
+<p align="center">
+<img src="./screenshoot/article.png" alt="Alt Text" width="400" height="200" align="center"/>
+  <img src="./screenshoot/mouvment.png" alt="Alt Text" width="400" height="200" align="center"/>
+</p>
+
 ## Requirements
 
 Before running the application, make sure you have the following requirements installed:
